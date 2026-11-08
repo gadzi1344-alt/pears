@@ -151,3 +151,9 @@ body.pear-liquid .nav-mobile,body.pear-liquid .left{background:#1a3024df;backdro
 @keyframes pear-liquid-glow{from{transform:translate3d(-2%,0,0) scale(1)}to{transform:translate3d(3%,2%,0) scale(1.07)}}
 @media(max-width:660px){.center-toolbar{padding-top:20px;gap:7px}.center-toolbar .center-search{padding-top:0}.center-toolbar .search-submit{padding:0 12px}.settings-modal{padding:19px}.settings-option{padding:13px 12px;gap:10px}}
 @media(prefers-reduced-motion:reduce){.pear-snow{display:none!important}body.pear-liquid::before{animation:none}.settings-open,.settings-switch,.settings-switch:before{transition:none}}
+
+/* Количество непрочитанных личных сообщений. */
+.nav button[data-nav="chat"],.nav-mobile button[data-nav="chat"]{position:relative}
+.nav-unread{position:absolute;z-index:2;top:1px;right:1px;display:grid;place-items:center;min-width:19px;height:19px;padding:0 5px;border:2px solid #122017;border-radius:999px;background:#ec454e;color:#fff;font-size:11px;font-weight:800;line-height:1;letter-spacing:0;pointer-events:none;box-shadow:0 2px 7px #0005}
+.nav-unread[hidden]{display:none}
+@media(max-width:660px){.nav-unread{top:0;right:2px}}
