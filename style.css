@@ -83,3 +83,9 @@
 .center-column .main{flex:1;min-height:0;padding:26px 0 32px}
 .pear-footer{border-top:1px solid #27352c;padding:20px 0 28px;display:flex;flex-wrap:wrap;gap:8px 20px;color:#a5b8aa;font-size:13px;line-height:1.5}
 @media(max-width:660px){.app{width:auto;max-width:none;padding:0 16px}.center-search{padding-top:20px}.center-column .main{padding:24px 0 32px}.pear-footer{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px));font-size:13px}}
+
+/* Рекомендации, статистика и осторожное удаление аккаунта. */
+.recommendation{display:flex;gap:12px;align-items:center}.recommendation .grow{min-width:0}.recommendation .quiet{flex:none}
+.admin-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:24px}.stat-card{background:#111b15;border:1px solid #304236;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}.stat-card span{color:#adc0b1;font-size:13px;line-height:1.35}.stat-card strong{font-size:24px;color:#ebfff0;line-height:1.15}.stats-note{grid-column:1/-1;color:#a5b8aa;font-size:13px;line-height:1.5;margin:3px 2px 0}
+.danger-zone{margin-top:24px;padding-top:18px;border-top:1px solid #54413f}.danger-zone p,.delete-warning p{color:#c9b8b8;font-size:14px;line-height:1.5}.danger-button{background:#a92f36;border:1px solid #d7545b;color:#fff;border-radius:10px;min-height:44px;padding:10px 16px;font-weight:700}.danger-button:hover{background:#c63c44}.danger-button:disabled{opacity:.5}.delete-warning .danger-button{margin-top:12px}.delete-warning strong{color:#fff}
+@media(max-width:660px){.admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat-card{padding:14px}.recommendation .quiet{padding:10px}.danger-button{width:100%}}
