@@ -17,8 +17,8 @@ module.exports = async function handler(req, res) {
     const user=await me.json();
     if (!UUID.test(user.id||'')) return res.status(401).json({error:'Не удалось проверить аккаунт.'});
     // Supabase cannot delete a user who still owns Storage objects. Clean files
-    // in this app's two user folders, including legacy nested folders.
-    for (const bucket of ['post-media','profile-media']) {
+    // in this app's user folders, including legacy nested folders.
+    for (const bucket of ['post-media','profile-media','chat-media']) {
       const queue=[user.id], paths=[];
       while(queue.length){
         const prefix=queue.shift(); let offset=0;
