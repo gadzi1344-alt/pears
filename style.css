@@ -99,3 +99,18 @@
 @media(prefers-reduced-motion:reduce){.chat-line.is-new{animation:none}}
 
 .chat-send svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Плюс точно в центре мобильного меню, включая режим администратора. */
+@media(max-width:660px){
+ .nav-mobile:not(.has-admin){grid-template-columns:repeat(5,minmax(0,1fr))}
+ .nav-mobile.has-admin{grid-template-columns:repeat(7,minmax(0,1fr))}
+ .nav-mobile [data-nav="feed"]{grid-column:1}
+ .nav-mobile [data-nav="search"]{grid-column:2}
+ .nav-mobile [data-compose]{grid-column:3}
+ .nav-mobile [data-nav="chat"]{grid-column:4}
+ .nav-mobile [data-nav="profile"],.nav-mobile:not(.has-admin) [data-nav="profile"]{grid-column:5}
+ .nav-mobile.has-admin [data-compose]{grid-column:4}
+ .nav-mobile.has-admin [data-nav="chat"]{grid-column:5}
+ .nav-mobile.has-admin [data-nav="profile"]{grid-column:6}
+ .nav-mobile.has-admin [data-nav="admin"]{grid-column:7}
+}
