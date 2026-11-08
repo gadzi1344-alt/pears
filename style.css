@@ -15,3 +15,28 @@
 @media (min-width:661px) and (max-height:550px){.left{max-height:100dvh;overflow-y:auto;gap:3px;padding-top:8px;padding-bottom:8px}.logo{margin-bottom:2px}.nav{gap:2px}.account{padding-top:4px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media (min-width:661px) and (max-width:1120px){.app{grid-template-columns:minmax(0,710px);max-width:900px}.right{display:none}}
+/* Телефоны: отдельная округлая панель и один способ создать пост. */
+@media(max-width:660px){
+ .app{padding:0 16px}
+ .main{padding:24px 0 calc(112px + env(safe-area-inset-bottom, 0px))}
+ .composer-mini{display:none}
+ .nav-mobile{left:50%;right:auto;bottom:max(14px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(360px,calc(100% - 32px));min-height:64px;padding:8px 12px;gap:4px;border:1px solid #364b3c;border-radius:24px;background:#152018f2;box-shadow:0 12px 36px #0009;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+ .nav-mobile button{display:grid;place-items:center;flex:1;min-width:44px;min-height:48px;border-radius:15px;transition:background .18s ease,color .18s ease,transform .18s ease}
+ .nav-mobile button:active{transform:scale(.93)}
+ .nav-mobile button.active{background:#213b2b;color:#9af6ba}
+ .nav-mobile button.create{max-width:56px;background:#36dc80;color:#061c0d}
+ .toast{bottom:calc(90px + env(safe-area-inset-bottom,0px));right:16px;left:auto;max-width:calc(100% - 32px)}
+ .field,.search,.modal textarea{font-size:16px}
+ .modal{padding:18px;max-height:calc(100dvh - 32px)}
+ .overlay{padding:16px}
+ .topline{gap:12px}.topline h1{line-height:1.15}.topline p{line-height:1.45}
+ .post-head{min-width:0}.post-head .grow{min-width:0}.user-btn,.post-meta{overflow-wrap:anywhere}
+ .profile-box .row{flex-wrap:wrap}.profile-box .grow{min-width:150px}
+ .comment-form{gap:8px}.comment-form .primary{padding:10px 12px}
+}
+@media(max-width:360px){
+ .app{padding:0 12px}.nav-mobile{width:calc(100% - 24px)}
+ .tabs .tab{padding-left:11px;padding-right:11px}.card{padding:14px}
+ .top-badge{padding:7px 9px}.tag{font-size:12px;padding:4px 7px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
