@@ -62,3 +62,10 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* Предотвращаем жесты масштабирования, но сохраняем обычную прокрутку. */
 @media(max-width:660px){html,body{touch-action:pan-x pan-y}}
+​
+/* У пользователей без админки — четыре равные колонки; у админа остаются пять. */
+@media (max-width:660px){
+ .nav-mobile:not(.has-admin){grid-template-columns:repeat(4,minmax(0,1fr))}
+ .nav-mobile:not(.has-admin) [data-nav="profile"]{grid-column:4}
+}
+​
