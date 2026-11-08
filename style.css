@@ -62,10 +62,24 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* Предотвращаем жесты масштабирования, но сохраняем обычную прокрутку. */
 @media(max-width:660px){html,body{touch-action:pan-x pan-y}}
-​
+
 /* У пользователей без админки — четыре равные колонки; у админа остаются пять. */
 @media (max-width:660px){
  .nav-mobile:not(.has-admin){grid-template-columns:repeat(4,minmax(0,1fr))}
  .nav-mobile:not(.has-admin) [data-nav="profile"]{grid-column:4}
 }
-​
+
+
+/* Поиск и лента — по центру; простая нижняя строка без вымышленных ссылок. */
+@media(min-width:661px){.app{display:block;width:min(710px,calc(100% - 200px));max-width:710px;padding:0}}
+.center-column{min-height:100dvh;display:flex;flex-direction:column;min-width:0}
+.center-search{position:relative;display:flex;align-items:center;gap:8px;padding-top:32px}
+.center-search[hidden]{display:none}
+.center-search-icon{position:absolute;left:15px;bottom:13px;width:20px;height:20px;color:#a5b9aa;pointer-events:none}
+.center-search-icon svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.center-search .search{padding-left:44px;min-width:0}
+.search-submit{border:1px solid #385441;background:#1b3022;color:#c2f2d0;border-radius:10px;min-height:46px;padding:0 16px;font-weight:700}
+.search-submit:hover{background:#254431}
+.center-column .main{flex:1;min-height:0;padding:26px 0 32px}
+.pear-footer{border-top:1px solid #27352c;padding:20px 0 28px;display:flex;flex-wrap:wrap;gap:8px 20px;color:#a5b8aa;font-size:13px;line-height:1.5}
+@media(max-width:660px){.app{width:auto;max-width:none;padding:0 16px}.center-search{padding-top:20px}.center-column .main{padding:24px 0 32px}.pear-footer{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px));font-size:13px}}
