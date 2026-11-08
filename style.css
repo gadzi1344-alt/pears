@@ -44,3 +44,14 @@
 .avatar{overflow:hidden}.avatar-img{display:block;width:100%;height:100%;object-fit:cover}.profile-cover{overflow:hidden}.profile-cover-image{display:block;width:100%;height:100%;object-fit:cover}.verified-badge{display:inline-block;width:19px;height:19px;object-fit:contain;vertical-align:-4px;margin-left:5px;flex:none}.profile-box h1 .verified-badge{width:23px;height:23px;vertical-align:-4px}.inline-link{font:inherit;line-height:inherit;color:#80e9a6;display:inline;padding:0;background:transparent;border:0;cursor:pointer;vertical-align:baseline;overflow-wrap:anywhere}.inline-link:hover{text-decoration:underline;color:#b2f6c9}.inline-link:focus-visible{outline-offset:1px}.suggestions{border:1px solid #354f3d;background:#17231b;border-radius:12px;overflow:hidden;margin:0 0 8px}.suggestion{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;min-height:44px;padding:9px 12px;color:#e8f3eb;background:transparent;border:0;text-align:left}.suggestion:hover,.suggestion.selected{background:#294333}.suggestion small{font-size:12px;color:#a5bcaa}.mention-hint{margin:2px 0 0}.admin-intro{display:flex;gap:14px;align-items:flex-start;border:1px solid #304c37;border-radius:14px;background:#142218;padding:18px;margin-bottom:20px}.admin-intro p{margin:6px 0 0}.admin-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#1f432c;color:#91e9ac;flex:none}.admin-mark svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.admin-search{margin-bottom:20px}.admin-row{display:flex;gap:12px;align-items:center}.verify-action{white-space:nowrap;font-size:13px}.verify-action.is-verified{border-color:#315c87;color:#a5d4ff;background:#183048}.nav-mobile button[data-nav="admin"]{min-width:44px}.left .nav button[data-nav="admin"]{flex:none}
 @media(max-width:360px){.nav-mobile{padding-left:7px;padding-right:7px;gap:0}.nav-mobile button{min-width:44px}.verified-badge{width:17px;height:17px}}
 @media(max-width:660px){#edit textarea{min-height:80px}#edit .label{margin-top:10px}#edit .field{margin:6px 0}}
+/* Фирменный знак и мобильное меню с центральной кнопкой. */
+.brand-icon{width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit}.logo-symbol,.boot-icon{overflow:hidden}
+@media(max-width:660px){
+ html,body{touch-action:manipulation}
+ .nav-mobile{display:grid;grid-template-columns:repeat(5,minmax(44px,1fr));align-items:center;justify-items:center;gap:0}
+ .nav-mobile button{width:100%;max-width:56px;min-width:44px}
+ .nav-mobile [data-nav="feed"]{grid-column:1}.nav-mobile [data-nav="search"]{grid-column:2}
+ .nav-mobile [data-compose]{grid-column:3}.nav-mobile [data-nav="profile"]{grid-column:4}
+ .nav-mobile [data-nav="admin"]{grid-column:5}
+}
+@media(max-width:660px){.nav-mobile:not(.has-admin) [data-nav="profile"]{grid-column:4 / 6}}
