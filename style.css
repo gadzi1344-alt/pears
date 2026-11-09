@@ -179,3 +179,6 @@ body.pear-liquid .nav-mobile,body.pear-liquid .left{background:#1a3024df;backdro
 
 /* Виртуальный номер: приватный по умолчанию. */
 .number-section{margin:24px 0 8px;padding:15px 16px;border:1px solid #304638;border-radius:13px;background:#101c15;display:flex;align-items:center;justify-content:space-between;gap:12px}.number-section strong{display:block;font-size:14px}.number-section small{display:block;color:#a5b8aa;font-size:12px;line-height:1.5;margin-top:3px}.number-section .quiet{flex:none}.number-intro{line-height:1.55;color:#bacbbf}.number-intro a{color:#87e8a4}.number-hint{color:#a8baad;font-size:13px;line-height:1.5}.number-submit{width:100%;margin-top:15px;min-height:44px}.number-auth{border:1px solid #477b58;background:#173627;color:#b9efc8}.number-stage .label{margin-top:14px}@media(max-width:360px){.number-section{align-items:flex-start;flex-direction:column}.number-section .quiet{width:100%}}
+
+/* Номер в профиле показывается только при разрешённой видимости. */
+.profile-pear-number{color:#a8eabb;font-size:14px;font-weight:650;letter-spacing:.01em;line-height:1.5;overflow-wrap:anywhere;margin:5px 0 2px}
